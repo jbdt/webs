@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '2.5.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
@@ -54,6 +54,16 @@ end
 # gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development do
+  gem 'capistrano', '~> 3.11'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails', '~> 1.4'
+  gem 'capistrano-rails-console'
+  gem 'capistrano-rvm', '~> 0.1.1'
+  gem 'capistrano-passenger', '~> 0.2.0'
+  gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
+  gem 'rails_apps_pages'
+  gem 'rails_layout'
+
   gem 'better_errors'
   gem 'binding_of_caller'
   # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
