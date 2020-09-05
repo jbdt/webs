@@ -28,6 +28,8 @@ gem 'jbuilder', '~> 2.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+gem 'devise'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -67,9 +69,12 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'debbie'
-  gem 'sextant'
+  # gem 'debbie'
+  gem "awesome_print", require:"ap"
   gem 'shog'
   # gem 'spring'
   # gem 'web-console', '>= 3.3.0'
+
+  gem 'terminal-notifier', '2.0.0'
+  gem 'terminal-notifier-guard', '1.7.0'
 end
