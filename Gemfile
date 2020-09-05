@@ -74,7 +74,12 @@ group :development do
   gem 'shog'
   # gem 'spring'
   # gem 'web-console', '>= 3.3.0'
+  gem 'annotate'
 
   gem 'terminal-notifier', '2.0.0'
   gem 'terminal-notifier-guard', '1.7.0'
+end
+
+group :development, :test do
+  gem 'rspec-rails', '~> 4.0.1'
 end
