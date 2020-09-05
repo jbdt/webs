@@ -46,10 +46,10 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
-  # Easy installation and use of web drivers to run system tests with browsers
-  gem 'webdrivers'
+  # gem 'capybara', '>= 2.15'
+  # gem 'selenium-webdriver'
+  # # Easy installation and use of web drivers to run system tests with browsers
+  # gem 'webdrivers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -70,7 +70,7 @@ group :development do
   gem 'binding_of_caller'
   # gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # gem 'debbie'
-  gem "awesome_print", require:"ap"
+  gem "awesome_print"
   gem 'shog'
   # gem 'spring'
   # gem 'web-console', '>= 3.3.0'

@@ -12,6 +12,7 @@
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string(255)
+#  role                   :integer          default(0), not null
 #  sign_in_count          :integer          default(0), not null
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
@@ -22,8 +23,23 @@
 #  index_users_on_reset_password_token  (reset_password_token) UNIQUE
 #
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  enum role: [ :admin, :integrator, :client ]
+
+  private
+
+  def admin?
+    self.role == 'admin'
+  end
+
+  def integrator?
+    self.role == 'integrator'
+  end
+
+  def client?
+    self.role == 'client'
+  end
+
 end
