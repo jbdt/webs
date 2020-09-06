@@ -9,4 +9,8 @@ module ApplicationHelper
       'Cliente'
     end
   end
+
+  def show_role(roles)
+    roles.index(current_user.role).present?
+  end
 end
