@@ -5,4 +5,7 @@ Rails.application.routes.draw do
       registrations: 'users/registrations'
   }
   root 'main#index'
+  resources :users
+  post '/users/create_user', to: 'users#create'
+
 end

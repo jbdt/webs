@@ -1,0 +1,8 @@
+<h1>Editing User</h1>
+
+<%= form_with(model: @user, local: true) do |form| %>
+  <%= render 'form', user: @user, form: form %>
+<% end %>
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>

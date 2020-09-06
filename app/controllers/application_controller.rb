@@ -13,4 +13,15 @@ class ApplicationController < ActionController::Base
     # or turn layout off for every devise controller:
     devise_controller? && "application"
   end
+
+  def after_sign_in_path_for(resource)
+    case current_user.role
+    when 'admin'
+      users_path
+    # when 'integrator'
+    # when 'client'
+    else
+      root_path
+    end
+  end
 end
