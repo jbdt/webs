@@ -14459,10 +14459,10 @@
 		"sSortColumn": "sorting_", /* Note that an int is postfixed for the sorting order */
 	
 		/* Filtering */
-		"sFilterInput": "form-control",
+		"sFilterInput": "form-control dataTables_margin-top_options",
 	
 		/* Page length */
-		"sLengthSelect": "form-control",
+		"sLengthSelect": "form-control dataTables_margin-top_options",
 	
 		/* Scrolling */
 		"sScrollWrapper": "dataTables_scroll",
