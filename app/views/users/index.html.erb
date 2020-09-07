@@ -5,41 +5,46 @@
         <div class="card-header">
           Usuarios
         </div>
+        <br>
         <div class="table-responsive">
-          <table class="align-middle mb-0 table table-borderless table-striped table-hover">
-            <thead>
-            <tr>
-              <th class="text-center">Id</th>
-              <th>Nombre / Email</th>
-              <th class="text-center">Rol</th>
-              <th class="text-center">Acciones</th>
-            </tr>
-            </thead>
-            <tbody>
-            <% @users.each do |user| %>
+          <div class="col-md-12">
+            <table id="table-users" class="align-middle mb-0 table table-borderless table-striped table-hover display">
+              <thead>
               <tr>
-                <td class="text-center text-muted"><%= user.id %></td>
-                <td>
-                  <div class="widget-content p-0">
-                    <div class="widget-content-wrapper">
-                      <div class="widget-content-left flex2">
-                        <div class="widget-heading">John Doe</div>
-                        <div class="widget-subheading opacity-7"><%= user.email %></div>
+                <th class="text-center">Id</th>
+                <th>Nombre / Email</th>
+                <th class="text-center">Rol</th>
+                <th class="text-center">Acciones</th>
+              </tr>
+              </thead>
+              <tbody>
+              <% @users.each do |user| %>
+                <tr>
+                  <td class="text-center text-muted"><%= user.id %></td>
+                  <td>
+                    <div class="widget-content p-0">
+                      <div class="widget-content-wrapper">
+                        <div class="widget-content-left flex2">
+                          <div class="widget-heading">John Doe</div>
+                          <div class="widget-subheading opacity-7"><%= user.email %></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </td>
-                <td class="text-center"><%= pretty_role(user.role) %></td>
-                <td class="text-center">
-                  <%= link_to 'Ver', user, class: "btn btn-primary btn-sm" %>
-                  <%= link_to 'Editar', edit_user_path(user), class: "btn btn-warning btn-sm" %>
-                  <%= link_to 'Eliminar', user, method: :delete, data: { confirm: '¿Estás seguro?' }, class: "btn btn-danger btn-sm" %>
-                </td>
-              </tr>
-            <% end %>
-            </tbody>
-          </table>
+                  </td>
+                  <td class="text-center"><%= pretty_role(user.role) %></td>
+                  <td class="text-center">
+                    <%= link_to 'Ver', user, class: "btn btn-primary btn-sm" %>
+                    <%= link_to 'Editar', edit_user_path(user), class: "btn btn-warning btn-sm" %>
+                    <%= link_to 'Eliminar', user, method: :delete, data: { confirm: '¿Estás seguro?' }, class: "btn btn-danger btn-sm" %>
+                  </td>
+                </tr>
+              <% end %>
+              </tbody>
+            </table>
+            <script>$(document).ready(function() {$('#table-users').DataTable();} );</script>
+          </div>
         </div>
+        <br>
         <div class="d-block text-center card-footer">
           <%= link_to 'Crear usuario', new_user_path, class:"btn-wide btn btn-success" %>
         </div>
@@ -47,4 +52,3 @@
     </div>
   </div>
 </div>
-

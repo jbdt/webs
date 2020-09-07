@@ -10,8 +10,12 @@ module ApplicationHelper
     end
   end
 
+  def allow_role(roles)
+    redirect_to root_path unless authorized_role(roles)
+  end
+
   def authorized_role(roles)
-    roles.index(current_user.role).present?
+    roles.index(current_user.try(:role)).present?
   end
 
   def menu_active(controller)
