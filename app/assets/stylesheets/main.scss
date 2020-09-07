@@ -10299,13 +10299,13 @@ button,
 .app-logo_sign-in {
   height: 23px;
   width: 97px;
-  background: url(logo.png)
+  background: url(asset_path("logo.png"))
 }
 
 .app-header__logo .logo-src {
   height: 23px;
   width: 97px;
-  background: url(logo-inverse.png)
+  background: url(asset_path("logo-inverse.png"))
 }
 
 .app-header__menu,
@@ -10431,7 +10431,7 @@ button,
 }
 
 .app-header.header-text-light .app-header__logo .logo-src {
-  background: url(logo.png)
+  background: url(asset_path("logo.png"))
 }
 
 .app-header.header-text-light .app-header__mobile-menu .hamburger-inner,
@@ -10529,7 +10529,7 @@ button,
 }
 
 .app-header.header-text-dark .app-header__logo .logo-src {
-  background: url(logo-inverse.png)
+  background: url(asset_path("logo-inverse.png"))
 }
 
 .app-sidebar {
@@ -10808,7 +10808,7 @@ button,
 }
 
 .app-sidebar.sidebar-text-light .app-header__logo .logo-src {
-  background: url(logo.png)
+  background: url(asset_path("logo.png"))
 }
 
 .app-sidebar.sidebar-text-light .app-header__logo .hamburger-inner,
