@@ -2,20 +2,21 @@
 #
 # Table name: users
 #
-#  id                 :bigint           not null, primary key
-#  current_sign_in_at :datetime
-#  current_sign_in_ip :string(255)
-#  email              :string(255)
-#  encrypted_password :string(255)      default(""), not null
-#  last_sign_in_at    :datetime
-#  last_sign_in_ip    :string(255)
-#  name               :string(255)
-#  phone              :string(255)
-#  role               :integer          default("admin")
-#  sign_in_count      :integer          default(0), not null
-#  surnames           :string(255)
-#  created_at         :datetime         not null
-#  updated_at         :datetime         not null
+#  id                  :bigint           not null, primary key
+#  current_sign_in_at  :datetime
+#  current_sign_in_ip  :string(255)
+#  email               :string(255)
+#  encrypted_password  :string(255)      default(""), not null
+#  last_sign_in_at     :datetime
+#  last_sign_in_ip     :string(255)
+#  name                :string(255)
+#  phone               :string(255)
+#  remember_created_at :datetime
+#  role                :integer          default("admin")
+#  sign_in_count       :integer          default(0), not null
+#  surnames            :string(255)
+#  created_at          :datetime         not null
+#  updated_at          :datetime         not null
 #
 # Indexes
 #
