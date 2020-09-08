@@ -217,3 +217,5 @@ modules.xml
 .idea/sonarlint
 
 # End of https://www.toptal.com/developers/gitignore/api/rails,ruby,rubymine+all
+
+config/database.yml
