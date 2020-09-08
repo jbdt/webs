@@ -30,6 +30,10 @@ class User < ApplicationRecord
 
   enum role: [ :admin, :integrator, :client ]
 
+  def full_name
+    "#{self.name} #{self.surnames}"
+  end
+
   private
 
   def admin?
