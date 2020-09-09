@@ -35,7 +35,7 @@
         <% if authorized_role(%w(admin)) %>
           <li class="app-sidebar__heading">Administración</li>
           <li>
-            <a href="<%= users_path %>" <%= menu_active('users') %>>
+            <a href="<%= users_path %>"<%= menu_active('users') %>>
               <i class="metismenu-icon pe-7s-users"></i>
               Usuarios
             </a>
@@ -80,9 +80,15 @@
             </a>
           </li>
           <li>
+            <a href="<%= styles_path %>"<%= menu_active('styles') %>">
+              <i class="metismenu-icon pe-7s-paint"></i>
+              Estilos
+            </a>
+          </li>
+          <li>
             <a href="index.html">
-              <i class="metismenu-icon pe-7s-config"></i>
-              Ajustes
+              <i class="metismenu-icon pe-7s-comment"></i>
+              Notificaciones
             </a>
           </li>
           <li>

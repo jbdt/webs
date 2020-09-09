@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  include ApplicationHelper
   before_action { allow_role(%w(admin)) }
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
