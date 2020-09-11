@@ -13,31 +13,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <script type="text/javascript" language="javascript" src="/resources/js/jquery-3.5.1.js"></script>
+    <%= render "layouts/head_js" %>
   </head>
 
   <body>
-    <div class="app-container app-theme-white<%= ' fixed-sidebar' if current_user.fixed_sidebar %><%= ' fixed-header' if current_user.fixed_header %><%= current_user.tab_line ? ' body-tabs-line' : ' body-tabs-shadow' %>">
-      <%= render "layouts/header"  %>
-      <div class="app-main">
-        <%= render "layouts/left-menu"  %>
-        <div class="app-main__outer">
-          <%= yield %>
+  <div class="app-container app-theme-white<%= ' fixed-sidebar' if current_user.fixed_sidebar %><%= ' fixed-header' if current_user.fixed_header %><%= current_user.tab_line ? ' body-tabs-line' : ' body-tabs-shadow' %>">
+        <%= render "layouts/header"  %>
+        <div class="app-main">
+          <%= render "layouts/left-menu"  %>
+          <div class="app-main__outer">
+            <%= yield %>
+          </div>
         </div>
       </div>
-    </div>
-    <script type="text/javascript" language="javascript" src="/resources/js/main.js"></script>
-    <script type="text/javascript" language="javascript" src="/resources/js/jquery.dataTables.js"></script>
-    <% unless flash.empty? %>
-    <script type="text/javascript">
-        <% flash.each do |f| %>
-        <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') %>
-        toastr['<%= type %>']('<%= f[1] %>');
-        <% end %>
-    </script>
-  <% end %>
+    <%= render 'layouts/flash' %>
+    <%= render "layouts/body_js" %>
   </body>
 </html>

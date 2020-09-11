@@ -1,7 +1,7 @@
 <div class="main-card mb-3 card">
   <div class="card-body">
     <h5 class="card-title">Pestañas</h5>
-    <%= form_with(url: styles_update_path) do %>
+    <%= form_with(id: 'tabs' , url: styles_update_path) do %>
       <div class="p-3">
         <ul class="list-group">
           <li class="list-group-item">
@@ -35,9 +35,10 @@
           </li>
         </ul>
       </div>
-      <div class="p-3">
-        <button class="mb-2 mr-2 btn btn-primary">Guardar cambios</button>
-      </div>
+      <%= hidden_field_tag("style[tab_line]") %>
     <% end %>
+    <div class="p-3">
+      <button class="mb-2 mr-2 btn btn-primary" onclick="submitTabs();">Guardar cambios</button>
+    </div>
   </div>
 </div>

@@ -1,0 +1,7 @@
+<%= javascript_include_tag "main" %>
+<% case "#{params[:controller]}##{params[:action]}" %>
+<% when 'users#index' %>
+  <%= javascript_include_tag "jquery.dataTables" %>
+<% when 'styles#edit' %>
+  <%= javascript_include_tag "styles" %>
+<% end %>
