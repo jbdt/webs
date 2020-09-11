@@ -18,6 +18,11 @@ ActiveRecord::Schema.define(version: 2020_09_05_103958) do
     t.string "phone"
     t.string "email"
     t.integer "role", default: 0
+    t.boolean "fixed_header", default: true, null: false
+    t.boolean "fixed_sidebar", default: true, null: false
+    t.string "header_color", default: "bg-royal header-text-light", null: false
+    t.string "sidebar_color", default: "bg-royal sidebar-text-light", null: false
+    t.boolean "tab_line", default: false, null: false
     t.integer "sign_in_count", default: 0, null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"

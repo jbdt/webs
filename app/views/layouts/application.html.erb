@@ -16,22 +16,20 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript" language="javascript" src="/resources/js/jquery-3.5.1.js"></script>
   </head>
 
   <body>
-    <div class="app-container app-theme-white body-tabs-shadow fixed-sidebar fixed-header">
+    <div class="app-container app-theme-white<%= ' fixed-sidebar' if current_user.fixed_sidebar %><%= ' fixed-header' if current_user.fixed_header %><%= current_user.tab_line ? ' body-tabs-line' : ' body-tabs-shadow' %>">
       <%= render "layouts/header"  %>
       <div class="app-main">
         <%= render "layouts/left-menu"  %>
         <div class="app-main__outer">
           <%= yield %>
-          <%#= render "layouts/footer"  %>
         </div>
-        <!--    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>-->
       </div>
     </div>
     <script type="text/javascript" language="javascript" src="/resources/js/main.js"></script>
-    <script type="text/javascript" language="javascript" src="/resources/js/jquery-3.5.1.js"></script>
     <script type="text/javascript" language="javascript" src="/resources/js/jquery.dataTables.js"></script>
     <% unless flash.empty? %>
     <script type="text/javascript">

@@ -1,0 +1,43 @@
+<div class="main-card mb-3 card">
+  <div class="card-body">
+    <h5 class="card-title">Pestañas</h5>
+    <%= form_with(url: styles_update_path) do %>
+      <div class="p-3">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <h5 class="pb-2">Pestañas de sección de página
+            </h5>
+            <div class="theme-settings-swatches">
+              <div role="group" class="mt-2 btn-group">
+                <button type="button" class="btn-wide btn-shadow btn-primary btn btn-secondary switch-theme-class" data-class="body-tabs-line">
+                  En linea
+                </button>
+                <button type="button" class="btn-wide btn-shadow btn-primary active btn btn-secondary switch-theme-class" data-class="body-tabs-shadow">
+                  Sombreado
+                </button>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="col-md-12 col-lg-6">
+              <ul class="body-tabs body-tabs-layout tabs-animated body-tabs-animated nav">
+                <li class="nav-item">
+                  <a role="tab" class="nav-link active" id="tab-0" data-toggle="tab" href="#tab-content-0">
+                    <span>Ejemplo pestaña 1</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a role="tab" class="nav-link" id="tab-1" data-toggle="tab" href="#tab-content-1">
+                    <span>Ejemplo pestaña 2</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="p-3">
+        <button class="mb-2 mr-2 btn btn-primary">Guardar cambios</button>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+<div class="main-card mb-3 card">
+  <div class="card-body">
+    <h5 class="card-title">Diseño</h5>
+    <%= form_with(id: 'design', url: styles_update_path) do %>
+      <div class="p-3">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="widget-content p-0">
+              <div class="widget-content-wrapper">
+                <div class="widget-content-left mr-3">
+                  <div class="switch has-switch switch-container-class" data-class="fixed-header">
+                    <div class="switch-animate switch-on">
+                      <input name="style[fixed_header]" type="checkbox"<%= ' checked="" ' if current_user.fixed_header %> data-toggle="toggle" data-onstyle="success">
+                    </div>
+                  </div>
+                </div>
+                <div class="widget-content-left">
+                  <div class="widget-heading">Fijar cabecera
+                  </div>
+                  <div class="widget-subheading">Hace que la cabecera quede fija, siempre visible
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="widget-content p-0">
+              <div class="widget-content-wrapper">
+                <div class="widget-content-left mr-3">
+                  <div class="switch has-switch switch-container-class" data-class="fixed-sidebar">
+                    <div class="switch-animate switch-on">
+                      <input name="style[fixed_sidebar]" type="checkbox"<%= ' checked="" ' if current_user.fixed_sidebar %>  data-toggle="toggle" data-onstyle="success">
+                    </div>
+                  </div>
+                </div>
+                <div class="widget-content-left">
+                  <div class="widget-heading">Fijar barra lateral
+                  </div>
+                  <div class="widget-subheading">Hace que la barra lateral quede fija, siempre visible
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="p-3">
+        <button class="mb-2 mr-2 btn btn-primary">Guardar cambios</button>
+      </div>
+    <% end %>
+  </div>
+</div>
+<script>
+    window.addEventListener("load", () => {
+        const element = document.querySelector("#design");
+        element.addEventListener("ajax:success", () => {
+            alert('ok');
+        });
+        element.addEventListener("ajax:error", () => {
+            alert('ko');
+        });
+    });
+</script>
