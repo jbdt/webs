@@ -14,7 +14,6 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
 Rails.application.config.assets.precompile += %w( jquery.dataTables.js )
-Rails.application.config.assets.precompile += %w( jquery-3.5.1.js )
 Rails.application.config.assets.precompile += %w( main.js )
 Rails.application.config.assets.precompile += %w( ready_callback.js )
 Rails.application.config.assets.precompile += %w( styles.js )

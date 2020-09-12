@@ -53,19 +53,19 @@
         <% if authorized_role(%w(admin integrator)) %>
           <li class="app-sidebar__heading">Páginas Web</li>
           <li>
-            <a href="tables-regular.html">
+            <a disabled onclick="toastr['warning']('En construcción...');">
               <i class="metismenu-icon pe-7s-note2"></i>
               Plantillas
             </a>
           </li>
           <li>
-            <a href="tables-regular.html">
+            <a disabled onclick="toastr['warning']('En construcción...');">
               <i class="metismenu-icon pe-7s-note"></i>
               Integraciones
             </a>
           </li>
           <li>
-            <a href="tables-regular.html">
+            <a disabled onclick="toastr['warning']('En construcción...');">
               <i class="metismenu-icon pe-7s-global"></i>
               Publicadas
             </a>
@@ -74,7 +74,7 @@
         <% if authorized_role(%w(admin integrator client)) %>
           <li class="app-sidebar__heading">Personal</li>
           <li>
-            <a href="index.html">
+            <a disabled onclick="toastr['warning']('En construcción...');">
               <i class="metismenu-icon pe-7s-user"></i>
               Perfil
             </a>
