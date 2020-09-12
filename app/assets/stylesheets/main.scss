@@ -24267,6 +24267,10 @@ a.fc-more:hover {
     transform: translateY(-50%) !important;
     min-width: 10px !important
   }
+  .btn-icon-only .btn-icon-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
   .popover .btn-icon-vertical .btn-icon-wrapper,
   .dropdown-menu .btn-icon-vertical .btn-icon-wrapper {
     display: none

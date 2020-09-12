@@ -37,9 +37,9 @@
                   <td class="text-center"><%= format_time(user.current_sign_in_at) %></td>
                   <td class="text-center"><%= pretty_role(user.role) %></td>
                   <td class="text-center">
-                    <%= link_to 'Ver', user, class: "btn btn-primary btn-sm" %>
-                    <%= link_to 'Editar', edit_user_path(user), class: "btn btn-warning btn-sm" %>
-                    <%= link_to 'Eliminar', user, method: :delete, data: { confirm: '¿Estás seguro?' }, class: "btn btn-danger btn-sm" %>
+                    <%= link_to '<i class="pe-7s-look btn-icon-wrapper"> </i>'.html_safe, user, class: "mr-2 btn-icon btn-icon-only btn btn-primary btn-sm" %>
+                    <%= link_to '<i class="pe-7s-pen btn-icon-wrapper"> </i>'.html_safe, edit_user_path(user), class: "mr-2 btn-icon btn-icon-only btn btn-warning btn-sm" %>
+                    <%= link_to '<i class="pe-7s-trash btn-icon-wrapper"> </i>'.html_safe, user, method: :delete, data: { confirm: '¿Eliminar usuario?' }, class: "mr-2 btn-icon btn-icon-only btn btn-danger btn-sm" %>
                   </td>
                 </tr>
               <% end %>
