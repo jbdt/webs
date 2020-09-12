@@ -22,6 +22,8 @@
         <div class="app-main">
           <%= render "layouts/left-menu"  %>
           <div class="app-main__outer">
+            <%= javascript_include_tag "loading_screen.js" %>
+            <%= loading_screen gif: 'loading_page' %>
             <%= yield %>
           </div>
         </div>

@@ -6,7 +6,11 @@
     <% unless flash.empty? %>
       <% flash.each do |f| %>
       <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'info') %>
-      toastr['<%= type %>']('<%= f[1] %>');
+        <% if f[1] == "You need to sign in or sign up before continuing." %>
+          toastr['<%= type %>']('Holiwiii');
+        <% else %>
+          toastr['<%= type %>']('<%= f[1] %>');
+        <% end %>
       <% end %>
     <% end %>
 </script>

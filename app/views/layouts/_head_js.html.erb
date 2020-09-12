@@ -1,6 +1,8 @@
 <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-<% case "#{params[:controller]}##{params[:action]}" %>
-<% when 'users#index', 'styles#edit' %>
-  <%= javascript_include_tag "jquery-3.5.1" %>
-<% end %>
+<%= javascript_include_tag "jquery-3.5.1" %>
+<%= javascript_include_tag "ready_callback" %>
+<%= javascript_include_tag "loading_screen.js" %>
+<%# case "#{params[:controller]}##{params[:action]}" %>
+<%# when 'users#index', 'styles#edit' %>
+<%# end %>

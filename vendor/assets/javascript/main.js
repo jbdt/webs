@@ -33329,11 +33329,3 @@
         (r.ga.q = r.ga.q || []).push(arguments)
     }, r.ga.l = 1 * new Date, s = a.createElement(o), d = a.getElementsByTagName(o)[0], s.async = 1, s.src = "//www.google-analytics.com/analytics.js", d.parentNode.insertBefore(s, d), ga("create", "UA-28909194-3", "auto"), ga("send", "pageview"))
 }, function(e, t) {}]);
-
-function ready(callback){
-    if (document.readyState!='loading') callback();
-    else if (document.addEventListener) document.addEventListener('DOMContentLoaded', callback);
-    else document.attachEvent('onreadystatechange', function(){
-            if (document.readyState=='complete') callback();
-        });
-}
