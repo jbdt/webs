@@ -14,15 +14,17 @@
     <meta name="description" content="This is an example dashboard created using build-in elements and components.">
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="turbolinks-visit-control" content="reload">
-    <%= render "layouts/head_js" %>
-  </head>
 
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
   <body>
   <div class="app-container app-theme-white<%= ' fixed-sidebar' if current_user.fixed_sidebar %><%= ' fixed-header' if current_user.fixed_header %><%= current_user.tab_line ? ' body-tabs-line' : ' body-tabs-shadow' %>">
         <%= render "layouts/header"  %>
         <div class="app-main">
           <%= render "layouts/left-menu"  %>
           <div class="app-main__outer">
+            <%= loading_screen color: '#eef1f5', background: '#eef1f5' %>
             <%= yield %>
           </div>
         </div>

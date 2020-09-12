@@ -1,4 +1,5 @@
 <%= javascript_include_tag "main" %>
+<%= javascript_include_tag "loading_screen" %>
 <% case "#{params[:controller]}##{params[:action]}" %>
 <% when 'users#index' %>
   <%= javascript_include_tag "jquery.dataTables" %>
