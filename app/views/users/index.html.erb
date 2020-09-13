@@ -33,7 +33,7 @@
                       </div>
                     </div>
                   </td>
-                  <td class="text-center"><%= user.phone %></td>
+                  <td class="text-center"><%= pretty_phone(user.phone) %></td>
                   <td class="text-center"><%= format_time(user.current_sign_in_at) %></td>
                   <td class="text-center"><%= pretty_role(user.role) %></td>
                   <td class="text-center">
