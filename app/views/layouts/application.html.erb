@@ -1,22 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Proyecto Webs</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Language" content="en">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Analytics Dashboard - This is an example dashboard created using build-in elements and components.</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no" />
-    <meta name="description" content="This is an example dashboard created using build-in elements and components.">
-    <meta name="msapplication-tap-highlight" content="no">
-    <meta name="turbolinks-visit-control" content="reload">
-
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= render 'layouts/head' %>
   </head>
   <body>
   <div class="app-container app-theme-white<%= ' fixed-sidebar' if current_user.fixed_sidebar %><%= ' fixed-header' if current_user.fixed_header %><%= current_user.tab_line ? ' body-tabs-line' : ' body-tabs-shadow' %>">
