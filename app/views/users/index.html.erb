@@ -37,6 +37,7 @@
                   <td class="text-center"><%= format_time(user.current_sign_in_at) %></td>
                   <td class="text-center"><%= pretty_role(user.role) %></td>
                   <td class="text-center">
+                    <button type="button" class="btn mr-2 mb-2 btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="reloadModal(<%= user.id %>)">Large modal</button>
                     <%= link_to '<i class="pe-7s-look btn-icon-wrapper"> </i>'.html_safe, user, class: "mr-2 btn-icon btn-icon-only btn btn-primary btn-sm" %>
                     <%= link_to '<i class="pe-7s-pen btn-icon-wrapper"> </i>'.html_safe, edit_user_path(user), class: "mr-2 btn-icon btn-icon-only btn btn-warning btn-sm" %>
                     <%= link_to '<i class="pe-7s-trash btn-icon-wrapper"> </i>'.html_safe, user, method: :delete, data: { confirm: '¿Eliminar usuario?' }, class: "mr-2 btn-icon btn-icon-only btn btn-danger btn-sm" %>
