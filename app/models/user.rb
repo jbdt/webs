@@ -28,6 +28,8 @@
 #  index_users_on_email  (email) UNIQUE
 #
 class User < ApplicationRecord
+  devise :timeoutable, :timeout_in => 1.day
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
