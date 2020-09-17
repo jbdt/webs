@@ -10,7 +10,7 @@
           </tr>
           </thead>
           <tbody>
-          <% current_user.ip_logs.order(change_time: :desc).last(1000).each do |ip_log| %>
+          <% @user.ip_logs.order(change_time: :desc).last(1000).each do |ip_log| %>
             <tr>
               <td><%= pretty_time_hhmmss(ip_log.change_time) %></td>
               <td><%= pretty_ip_location(ip_log.ip) %></td>

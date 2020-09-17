@@ -13,7 +13,7 @@
         <%= yield %>
       </div>
     </div>
-    <%= render "#{params[:controller]}/modals" rescue nil %>
+    <%= render 'modals' rescue nil %>
   </div>
     <%= render 'layouts/flash' %>
     <%= render 'layouts/body_js' %>
