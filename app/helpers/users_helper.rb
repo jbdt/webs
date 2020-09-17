@@ -58,7 +58,7 @@ module UsersHelper
     if ip == '::1'
       'Local'
     else
-      "<a href=\"https://whatismyipaddress.com/ip/#{ip_log.ip}\"></a>".html_safe
+      "<a href=\"https://whatismyipaddress.com/ip/#{ip}\" target=\"_blank\">#{ip}</a>".html_safe
     end
   end
 
