@@ -31,11 +31,11 @@ module UsersHelper
   end
 
   def pretty_time_hhmm(time)
-    time.try(:strftime, '%Y/%m/%d %R') || 'Nunca'
+    time.try(:to_datetime).try(:strftime, '%Y/%m/%d %R') || 'Nunca'
   end
 
   def pretty_time_hhmmss(time)
-    time.try(:strftime, '%Y/%m/%d %H:%M:%S') || 'Nunca'
+    time.try(:to_datetime).try(:strftime, '%Y/%m/%d %H:%M:%S') || 'Nunca'
   end
 
   def pretty_ip(ip)
