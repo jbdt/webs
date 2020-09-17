@@ -5,17 +5,17 @@
   </head>
   <body>
   <div class="app-container app-theme-white<%= ' fixed-sidebar' if current_user.fixed_sidebar %><%= ' fixed-header' if current_user.fixed_header %><%= current_user.tab_line ? ' body-tabs-line' : ' body-tabs-shadow' %>">
-    <%= render "layouts/header"  %>
+    <%= render 'layouts/header'  %>
     <div class="app-main">
-      <%= render "layouts/left-menu"  %>
+      <%= render 'layouts/left-menu'  %>
       <div class="app-main__outer">
         <%= loading_screen color: '#eef1f5', background: '#eef1f5' %>
         <%= yield %>
       </div>
     </div>
-    <%= render 'modals' rescue nil %>
+    <%= render "#{params[:controller]}/modals" rescue nil %>
   </div>
     <%= render 'layouts/flash' %>
-    <%= render "layouts/body_js" %>
+    <%= render 'layouts/body_js' %>
   </body>
 </html>
