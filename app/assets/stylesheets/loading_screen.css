@@ -1,4 +1,4 @@
-.loading_screen-spinner {
+.loading_screen {
     position: fixed;
     left: 0;
     top: 0;
@@ -8,7 +8,7 @@
     background: rgb(249,249,249);
 }
 
-.loading_screen-spinner > div {
+.loading_screen > div {
     position: fixed;
     top:50%;
     left:50%;

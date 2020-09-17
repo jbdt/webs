@@ -9,7 +9,7 @@
     <div class="app-main">
       <%= render 'layouts/left-menu'  %>
       <div class="app-main__outer">
-        <%= loading_screen color: '#eef1f5', background: '#eef1f5' %>
+        <%= render 'layouts/loading_screen'  %>
         <%= yield %>
       </div>
     </div>
