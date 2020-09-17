@@ -1,0 +1,27 @@
+<div id="ip-logs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div id="modal-body" class="modal-body">
+        <table class="mb-0 table table-hover">
+          <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>IP</th>
+          </tr>
+          </thead>
+          <tbody>
+          <% current_user.ip_logs.order(change_time: :desc).last(1000).each do |ip_log| %>
+            <tr>
+              <td><%= pretty_time_hhmmss(ip_log.change_time) %></td>
+              <td><%= pretty_ip_location(ip_log.ip) %></td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>

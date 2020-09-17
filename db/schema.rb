@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_05_103958) do
+ActiveRecord::Schema.define(version: 2020_09_17_072953) do
+
+  create_table "ip_logs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "ip"
+    t.timestamp "change_time"
+    t.index ["user_id"], name: "fk_rails_78b2a66551"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4", force: :cascade do |t|
     t.string "name"
@@ -35,4 +42,5 @@ ActiveRecord::Schema.define(version: 2020_09_05_103958) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "ip_logs", "users", on_delete: :cascade
 end

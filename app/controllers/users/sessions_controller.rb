@@ -12,13 +12,20 @@ class Users::SessionsController < Devise::SessionsController
 
   # POST /resource/sign_in
   def create
-    current_user.update(
-        sign_in_count: current_user.sign_in_count.succ,
-        current_sign_in_at: Time.now,
-        last_sign_in_at: current_user.current_sign_in_at,
-        current_sign_in_ip: request.remote_ip,
-        last_sign_in_ip: current_user.current_sign_in_ip
-    ) if current_user
+    if current_user
+      IpLog.create(
+        change_time: Time.now,
+        ip: request.remote_ip,
+        user: current_user
+      )
+      current_user.update(
+          sign_in_count: current_user.sign_in_count.succ,
+          current_sign_in_at: Time.now,
+          last_sign_in_at: current_user.current_sign_in_at,
+          current_sign_in_ip: request.remote_ip,
+          last_sign_in_ip: current_user.current_sign_in_ip
+      )
+    end
     super
   end
 

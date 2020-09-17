@@ -65,19 +65,19 @@
             <tbody>
             <tr>
               <th>Última conexión</th>
-              <td><%= format_time(@user.current_sign_in_at) %></td>
+              <td><%= pretty_time_hhmm(@user.current_sign_in_at) %></td>
             </tr>
             <tr>
               <th>Fecha creación</th>
-              <td><%= format_time(@user.created_at) %></td>
+              <td><%= pretty_time_hhmm(@user.created_at) %></td>
             </tr>
             <tr>
               <th>Última IP conocida</th>
-              <td><%= pretty_ip(@user.current_sign_in_ip) %></td>
+              <td><%= pretty_ip_show(@user.current_sign_in_ip) %></td>
             </tr>
             <tr>
               <th>Última actualziación</th>
-              <td><%= format_time(@user.updated_at) %></td>
+              <td><%= pretty_time_hhmm(@user.updated_at) %></td>
             </tr>
             </tbody>
           </table>

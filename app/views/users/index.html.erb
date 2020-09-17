@@ -34,7 +34,7 @@
                     </div>
                   </td>
                   <td class="text-center"><%= pretty_phone(user.phone) %></td>
-                  <td class="text-center"><%= format_time(user.current_sign_in_at) %></td>
+                  <td class="text-center"><%= pretty_time_hhmm(user.current_sign_in_at) %></td>
                   <td class="text-center"><%= pretty_role(user.role) %></td>
                   <td class="text-center">
                     <button type="button" class="btn mr-2 mb-2 btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg" onclick="reloadModal(<%= user.id %>)">Large modal</button>

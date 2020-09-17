@@ -33,6 +33,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  has_many :ip_logs
+
   validates_presence_of [ :name, :surnames, :phone, :email, :role, :encrypted_password ]
 
   enum role: [ :admin, :integrator, :client ]
