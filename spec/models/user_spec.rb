@@ -2,26 +2,27 @@
 #
 # Table name: users
 #
-#  id                  :bigint           not null, primary key
-#  current_sign_in_at  :datetime
-#  current_sign_in_ip  :string(255)
-#  email               :string(255)
-#  encrypted_password  :string(255)      default(""), not null
-#  fixed_header        :boolean          default(TRUE), not null
-#  fixed_sidebar       :boolean          default(TRUE), not null
-#  header_color        :string(255)      default("bg-royal header-text-light"), not null
-#  last_sign_in_at     :datetime
-#  last_sign_in_ip     :string(255)
-#  name                :string(255)
-#  phone               :string(255)
-#  remember_created_at :datetime
-#  role                :integer          default("admin")
-#  sidebar_color       :string(255)      default("bg-royal sidebar-text-light"), not null
-#  sign_in_count       :integer          default(0), not null
-#  surnames            :string(255)
-#  tab_line            :boolean          default(FALSE), not null
-#  created_at          :datetime         not null
-#  updated_at          :datetime         not null
+#  id                   :bigint           not null, primary key
+#  current_sign_in_at   :datetime
+#  current_sign_in_ip   :string(255)
+#  email                :string(255)
+#  encrypted_password   :string(255)      default(""), not null
+#  fixed_header         :boolean          default(TRUE), not null
+#  fixed_sidebar        :boolean          default(TRUE), not null
+#  header_color         :string(255)      default("bg-royal header-text-light"), not null
+#  last_sign_in_at      :datetime
+#  last_sign_in_ip      :string(255)
+#  name                 :string(255)
+#  phone                :string(255)
+#  remember_created_at  :datetime
+#  reset_password_token :string(255)
+#  role                 :integer          default("admin")
+#  sidebar_color        :string(255)      default("bg-royal sidebar-text-light"), not null
+#  sign_in_count        :integer          default(0), not null
+#  surnames             :string(255)
+#  tab_line             :boolean          default(FALSE), not null
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
 #
 # Indexes
 #

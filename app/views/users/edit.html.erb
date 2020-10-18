@@ -1,8 +1,13 @@
-<h1>Editing User</h1>
-
-<%= form_with(model: @user, local: true) do |form| %>
-  <%= render 'form', user: @user, form: form %>
-<% end %>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<div class="app-main__inner">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="main-card mb-3 card">
+        <div class="card-body"><h5 class="card-title">Editar usuario</h5>
+          <%= form_with(model: @user, local: true) do |form| %>
+            <%= render 'users/form', user: @user, form: form %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

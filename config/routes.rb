@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :users
   post '/users/create_user', to: 'users#create'
   post '/users/get_user', to: 'users#get_user'
+  post '/users/update_user', to: 'users#update_user'
 
   get '/styles', to: 'styles#edit'
   post '/styles/update', to: 'styles#update'

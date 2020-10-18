@@ -23,6 +23,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string   :last_sign_in_ip
       t.string   :encrypted_password, null: false, default: ""
       t.datetime :remember_created_at
+      t.string   :reset_password_token
 
       t.timestamps null: false
     end

@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2020_09_17_072953) do
     t.string "last_sign_in_ip"
     t.string "encrypted_password", default: "", null: false
     t.datetime "remember_created_at"
+    t.string "reset_password_token"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["email"], name: "index_users_on_email", unique: true
