@@ -793,12 +793,23 @@ a:focus{
 }
 
 .price-list{
-	max-width: 420px;
-	margin: 0 auto 30px;
+	max-width: 480px;
+	margin: 0 auto 24px;
 }
 
 .price-item{
-	font-size: 20px;
+	font-size: 16px;
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 0.1em;
+	display: table-cell;
+	white-space: nowrap;
+	width: 10%;
+	padding-right: 4px;
+}
+
+.price-subitem{
+	font-size: 12px;
 	text-transform: uppercase;
 	color: #fff;
 	letter-spacing: 0.1em;
@@ -812,13 +823,13 @@ a:focus{
 	display: table-cell;
 	border-bottom: 1px dashed #fff;
 	position: relative;
-	bottom: 4px;
+	bottom: 2px;
 }
 
 .price-amount{
 	text-align: right;
 	display: table-cell;
-	font-size: 20px;
+	font-size: 16px;
 	color: #fff;
 	letter-spacing: 0.1em;
 	white-space: nowrap;
