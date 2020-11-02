@@ -439,7 +439,7 @@ a:focus{
 	top: 0px;
 	left: 0;
 	width: 100%;
-	background: url(../images/banner.jpg) no-repeat center center;
+	background: url(../images/banner2.jpg) no-repeat center center;
 	background-size: cover;
 	padding: 100px 0 100px;
 }
@@ -810,13 +810,6 @@ a:focus{
 
 .price-subitem{
 	font-size: 12px;
-	text-transform: uppercase;
-	color: #fff;
-	letter-spacing: 0.1em;
-	display: table-cell;
-	white-space: nowrap;
-	width: 10%;
-	padding-right: 4px;
 }
 
 .price-line{
