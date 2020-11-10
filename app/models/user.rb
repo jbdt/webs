@@ -34,7 +34,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :ip_logs
+  has_many :ip_logs, dependent: :destroy
 
   validates_presence_of [ :name, :surnames, :phone, :email, :role, :encrypted_password ]
 
@@ -45,7 +45,6 @@ class User < ApplicationRecord
   end
 
   private
-
   def admin?
     self.role == 'admin'
   end

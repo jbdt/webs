@@ -18,5 +18,12 @@
 require 'rails_helper'
 
 RSpec.describe IpLog, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:user) { FactoryBot.create(:user) }
+
+  it("has many ip_logs dependent destroy") do
+    FactoryBot.create_list(:ip_log, 10, user: user)
+    should respond_to(:user)
+    expect { user.destroy }.to change { IpLog.count }
+  end
+
 end
